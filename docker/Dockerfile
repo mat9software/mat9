@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 #How to use :
 #
 #(optional) sudo su
-#docker build . -t mat9software:latest
+#docker build . -t mat9:latest
 
 WORKDIR /docker_install
 

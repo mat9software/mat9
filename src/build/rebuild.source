@@ -1,0 +1,4 @@
+rm -r CMakeCache.txt CMakeFiles Makefile cmake_install.cmake index.html index.js index.wasm libmat9.a 
+emcmake cmake ..
+emmake make
+
