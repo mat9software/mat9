@@ -6,7 +6,7 @@
 #include <stdarg.h>
 
 
-static struct allocator_cbs allocator =
+static struct allocators allocator =
 {
  .malloc=&malloc,
  .realloc=&realloc,

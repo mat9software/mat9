@@ -11,9 +11,9 @@ static const struct str invalid_str = {
 };
 
 //--------------------
-struct str_buf str_buf_create(size_t size, struct allocator_cbs* arg_allocator_cbs)
+struct str_buf str_buf_create(size_t size, struct allocators* arg_allocator_cbs)
 {
- struct allocator_cbs allocator_cbs;
+ struct allocators allocator_cbs;
  if(arg_allocator_cbs) allocator_cbs = *arg_allocator_cbs;
  else allocator_cbs = allocator_get_default();
  

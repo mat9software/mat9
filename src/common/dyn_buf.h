@@ -1,10 +1,10 @@
 #ifndef COMMON_DYN_BUF_H
 #define COMMON_DYN_BUF_H
 
-#include "common/allocator_cbs.h"
+#include "common/allocators.h"
 
 struct dyn_buf_info {
- struct allocator_cbs allocator_cbs;
+ struct allocators allocator_cbs;
  size_t size;
  size_t capacity;
  size_t size_of_one;

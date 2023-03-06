@@ -7,7 +7,7 @@
 #include <assert.h>
 
 //--------------------------------------------------
-void test_common_dyn_buf_add(struct allocator_cbs allocator)
+void test_common_dyn_buf_add(struct allocators allocator)
 {
  struct generic_dyn_buf(int) dyn_buf = dyn_buf_create(int, 4, allocator);
  SCOPE(dyn_buf_destroy(&dyn_buf))
@@ -35,7 +35,7 @@ void test_common_dyn_buf_add(struct allocator_cbs allocator)
 }
 
 //--------------------------------------------------
-void test_common_dyn_buf_sort(struct allocator_cbs allocator)
+void test_common_dyn_buf_sort(struct allocators allocator)
 {
  struct generic_dyn_buf(int) dyn_buf = dyn_buf_create(int, 4, allocator);
  SCOPE(dyn_buf_destroy(&dyn_buf))
@@ -62,7 +62,7 @@ void test_common_dyn_buf_sort(struct allocator_cbs allocator)
 }
 
 //--------------------------------------------------
-void test_common_dyn_buf(struct allocator_cbs allocator)
+void test_common_dyn_buf(struct allocators allocator)
 {
  test_common_dyn_buf_add(allocator);
  test_common_dyn_buf_sort(allocator);

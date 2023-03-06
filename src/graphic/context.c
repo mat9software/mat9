@@ -1,7 +1,7 @@
 #include "graphic/context.h"
 
 #include "common/log.h"
-#include "common/allocator_cbs.h"
+#include "common/allocators.h"
 
 #include <stdlib.h>
 #include <assert.h>

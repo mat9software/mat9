@@ -1,5 +1,5 @@
 #include "common/test.h"
-#include "common/allocator_cbs.h"
+#include "common/allocators.h"
 
 #include "test/test_common_str.h"
 #include "test/test_common_log.h"
@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 
-static struct allocator_cbs allocator =
+static struct allocators allocator =
 {
  .malloc=&malloc,
  .realloc=&realloc,

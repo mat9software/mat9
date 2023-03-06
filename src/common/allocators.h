@@ -3,13 +3,13 @@
 
 #include <stddef.h>
 
-struct allocator_cbs {
+struct allocators {
 void* (*malloc) (size_t size); 
 void* (*realloc) (void* ptr, size_t size); 
 void (*free) (void* ptr); 
 };
 
-struct allocator_cbs allocator_get_default();
-void allocator_set_default(struct allocator_cbs cbs);
+struct allocators allocator_get_default();
+void allocator_set_default(struct allocators cbs);
 
 #endif

@@ -45,7 +45,7 @@ void _max_heap(struct dyn_buf_info dyn_buf_info, void* data, int (*comparator)(v
 {
  const size_t size_of_one = dyn_buf_info.size_of_one;
  const size_t size = dyn_buf_info.size; 
- const struct allocator_cbs allocator_cbs = dyn_buf_info.allocator_cbs;
+ const struct allocators allocator_cbs = dyn_buf_info.allocator_cbs;
 
  void* tmp = allocator_cbs.malloc(size_of_one);
  SCOPE(allocator_cbs.free(tmp))
@@ -78,7 +78,7 @@ void _heapify(struct dyn_buf_info dyn_buf_info, void* data, int (*comparator)(vo
 {
  const size_t size = dyn_buf_info.size;
  const size_t size_of_one = dyn_buf_info.size_of_one;
- const struct allocator_cbs allocator_cbs = dyn_buf_info.allocator_cbs;
+ const struct allocators allocator_cbs = dyn_buf_info.allocator_cbs;
  
  void* tmp = allocator_cbs.malloc(size_of_one);
  SCOPE(allocator_cbs.free(tmp))
@@ -120,7 +120,7 @@ void _dyn_buf_sort(struct dyn_buf_info dyn_buf_info, void* data, int (*comparato
 {
  const size_t size_of_one = dyn_buf_info.size_of_one; 
  const size_t size = dyn_buf_info.size;
- const struct allocator_cbs allocator_cbs = dyn_buf_info.allocator_cbs;
+ const struct allocators allocator_cbs = dyn_buf_info.allocator_cbs;
 
  _max_heap(dyn_buf_info, data, comparator);
 

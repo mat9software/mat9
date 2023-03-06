@@ -1,0 +1,1 @@
+grep -rli 'old-word' * | xargs -i@ sed -i 's/old-word/new-word/g' @

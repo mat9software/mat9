@@ -1,8 +1,8 @@
 #ifndef TEST_COMMON_STR_H
 #define TEST_COMMON_STR_H
 
-#include "common/allocator_cbs.h"
+#include "common/allocators.h"
 
-void test_common_str_run(struct allocator_cbs allocator);
+void test_common_str_run(struct allocators allocator);
 
 #endif
