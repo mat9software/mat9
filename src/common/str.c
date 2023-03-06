@@ -11,8 +11,12 @@ static const struct str invalid_str = {
 };
 
 //--------------------
-struct str_buf str_buf_create(size_t size, struct allocator_cbs allocator_cbs)
+struct str_buf str_buf_create(size_t size, struct allocator_cbs* arg_allocator_cbs)
 {
+ struct allocator_cbs allocator_cbs;
+ if(arg_allocator_cbs) allocator_cbs = *arg_allocator_cbs;
+ else allocator_cbs = allocator_get_default();
+ 
  const size_t size_of_one = sizeof(char);
  char* data = allocator_cbs.malloc(size*size_of_one);
 

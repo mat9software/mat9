@@ -22,7 +22,7 @@ set laststatus=2
 " ---------- HOTKEYS ----------
 
 " Switch between header and source file.
-map <C-H> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+map <C-H> :e %:p:s,.h$,.X123X,:s,.c$,.h,:s,.X123X$,.c,<CR>
 map <C-E> :tabe 
 " ---------- CLANG-FORMAT ----------
 map <C-K> :!clang-format -style=Google -assume-filename=@%<cr>

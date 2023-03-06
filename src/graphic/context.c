@@ -1,6 +1,7 @@
 #include "graphic/context.h"
 
 #include "common/log.h"
+#include "common/allocator_cbs.h"
 
 #include <stdlib.h>
 #include <assert.h>
@@ -60,7 +61,7 @@ size_t graphic_context_global_init()
     return 1;
   }
 
-  global_graphic_context = calloc(1, sizeof(*global_graphic_context));
+  global_graphic_context = allocator_get_default().malloc(sizeof(*global_graphic_context));
   global_graphic_context->window = SDL_CreateWindow(
       "Default Parameter", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
       1024, 768, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
@@ -114,7 +115,7 @@ size_t graphic_context_global_uninit()
 
   SDL_Quit();
 
-  free(global_graphic_context);
+  allocator_get_default().free(global_graphic_context);
   global_graphic_context = 0x0;
 
   return 0;

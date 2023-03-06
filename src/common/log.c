@@ -1,8 +1,10 @@
 #include "common/log.h"
 
+/*
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+
 
 static struct allocator_cbs allocator =
 {
@@ -84,3 +86,4 @@ static void _print(int fd, const char* fmt, va_list* vl)
  
  str_buf_destroy(&str_buf);
 }
+*/

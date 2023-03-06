@@ -8,6 +8,7 @@ add_library(mat9 STATIC
     common/str.c
     common/dyn_buf.c
     common/log.c
+    common/allocator_cbs.c
     graphic/context.c)
 target_include_directories(mat9 PUBLIC .)
 
