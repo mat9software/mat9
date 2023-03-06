@@ -1,6 +1,9 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+//FIXME convert to str.h
+//
+
 #include <vector>
 #include "common/log.h"
 

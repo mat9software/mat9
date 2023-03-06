@@ -52,7 +52,8 @@ while(0)
 void _dyn_buf_ensure_capacity_for_add(struct dyn_buf_info* dyn_buf_info, void** data);
 
 //--------------------------------------------------
-int _dyn_buf_comparator_int(void* lhs, void* rhs);
+#define generic_dyn_buf_sort_cmp(dyn_buf, compare_func) \
+ _dyn_buf_sort(dyn_buf.dyn_buf_info, dyn_buf.data, compare_func)
 
 #define generic_dyn_buf_sort(dyn_buf) \
  _generic_dyn_buf_sort(dyn_buf.dyn_buf_info, dyn_buf.data, *dyn_buf.data)
@@ -62,6 +63,8 @@ int _dyn_buf_comparator_int(void* lhs, void* rhs);
  _Generic(typed_var, int: &_dyn_buf_comparator_int))
 
 void _dyn_buf_sort(struct dyn_buf_info dyn_buf_info, void* data, int (*comparator)(void* lhs, void* rhs));
+
+int _dyn_buf_comparator_int(void* lhs, void* rhs);
 
 //--------------------------------------------------
 /*

@@ -18,7 +18,8 @@ struct str_buf str_buf_create(size_t size, struct allocators* allocator_cbs);
 void str_buf_destroy(struct str_buf* str_buf_ptr);
 void str_buf_append(struct str_buf* str_buf_ptr, struct str str);
 void str_buf_remove(struct str_buf* str_buf_ptr, size_t begin, size_t end);
-struct str str_buf_str(struct str_buf str_buf);
+struct str str_buf_to_str(struct str_buf str_buf);
+//TODO struct str str_buf_to_str_copy(struct str_buf str_buf);
 
 bool str_valid(struct str str);
 bool str_match(struct str a, struct str b);

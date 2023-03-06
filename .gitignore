@@ -1,6 +1,7 @@
 **/web/*
 **/build/*
 *.swp
+tags
 # Prerequisites
 *.d
 

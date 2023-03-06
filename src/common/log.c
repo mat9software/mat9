@@ -82,7 +82,7 @@ static void _print(int fd, const char* fmt, va_list* vl)
 
  str_buf_append(&str_buf, fmt_str_itr);
  
- _print_str_fd(fd, str_buf_str(str_buf));
+ _print_str_fd(fd, str_buf_to_str(str_buf));
  
  str_buf_destroy(&str_buf);
 }
